@@ -1,2 +1,0 @@
-['source_file', 'source_sheet', '姓名', '成绩', '日期', '备注']
-['date_data.xlsx', '成绩单', '张三', 95, datetime.datetime(2026, 3, 31, 0, 0), '优秀']

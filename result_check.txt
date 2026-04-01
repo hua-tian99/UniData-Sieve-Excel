@@ -1,3 +1,0 @@
-      source_file source_sheet  姓名  成绩         日期  备注
-0  date_data.xlsx          成绩单  张三  95 2026-03-31  优秀
-['source_file', 'source_sheet', '姓名', '成绩', '日期', '备注']
