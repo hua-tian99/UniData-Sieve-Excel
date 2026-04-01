@@ -1,0 +1,6 @@
+17:10:17 | INFO     | 开始处理: tests\fixtures\nested.zip
+17:10:17 | INFO     | 匹配模式: and | 关键词: ['张三']
+17:10:17 | INFO     | 共找到 1 个 Excel 文件
+17:10:17 | INFO     | 已导出 1 行 x 6 列 -> result.xlsx
+17:10:17 | INFO     | 完成！共匹配 1 行 -> result.xlsx
+17:10:17 | INFO     | 处理完成，共 1 条匹配记录 -> D:\桌面\综测计算\UniData-Sieve\result.xlsx

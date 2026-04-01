@@ -1,0 +1,6 @@
+21:07:09 | INFO     | 开始处理: tests\fixtures\nested.zip
+21:07:09 | INFO     | 匹配模式: or | 关键词: ['张三', '李四']
+21:07:09 | INFO     | 共找到 1 个 Excel 文件
+21:07:09 | INFO     | 已导出 2 行 x 6 列 -> result_p2.xlsx
+21:07:09 | INFO     | 完成！共匹配 2 行 -> result_p2.xlsx
+21:07:09 | INFO     | 处理完成，共 2 条匹配记录 -> D:\桌面\综测计算\UniData-Sieve\result_p2.xlsx

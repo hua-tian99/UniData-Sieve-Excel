@@ -1,0 +1,17 @@
+..............................................                           [100%]
+
+---------- coverage: platform win32, python 3.11.9-final-0 -----------
+Name                      Stmts   Miss  Cover   Missing
+-------------------------------------------------------
+config\__init__.py            0      0   100%
+config\schema.py             27      5    81%   33-37
+engine\__init__.py           32     23    28%   29-87
+engine\aggregator.py         62      9    85%   80-87, 110, 113-115
+engine\excel_handler.py      84     27    68%   49-50, 108-110, 132, 143-163, 193-196
+engine\exporter.py           38      1    97%   73
+engine\matcher.py            22      1    95%   47
+engine\processor.py          64     22    66%   19, 27, 33-35, 49-50, 56-64, 71, 91-93, 98-100
+-------------------------------------------------------
+TOTAL                       329     88    73%
+
+46 passed in 1.08s

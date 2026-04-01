@@ -1,0 +1,14 @@
+{
+  "match_rule": {
+    "keywords": [],
+    "mode": "and",
+    "pattern": null
+  },
+  "column_mode": "full",
+  "max_depth": 5,
+  "output_filename": "result.xlsx",
+  "log_level": "INFO",
+  "temp_dir": "temp",
+  "logs_dir": "logs",
+  "stream_threshold": 50000
+}

@@ -1,0 +1,54 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.4.2, pluggy-1.6.0 -- D:\桌面\综测计算\UniData-Sieve\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\桌面\综测计算\UniData-Sieve
+configfile: pyproject.toml
+plugins: cov-5.0.0
+collecting ... collected 26 items
+
+tests/test_matcher.py::test_and_mode_all_present PASSED
+tests/test_matcher.py::test_and_mode_missing_one PASSED
+tests/test_matcher.py::test_or_mode_one_present PASSED
+tests/test_matcher.py::test_or_mode_none_present PASSED
+tests/test_matcher.py::test_regex_mode_match PASSED
+tests/test_matcher.py::test_regex_mode_no_match PASSED
+tests/test_matcher.py::test_regex_mode_empty_pattern PASSED
+tests/test_matcher.py::test_case_insensitive PASSED
+tests/test_excel_handler.py::test_normalize_cell[None--None \u2192 \u7a7a\u5b57\u7b26\u4e32] PASSED
+tests/test_excel_handler.py::test_normalize_cell[nan--NaN  \u2192 \u7a7a\u5b57\u7b26\u4e32] PASSED
+tests/test_excel_handler.py::test_normalize_cell[value2-2026/3/31-datetime with time \u2192 YYYY/M/D] PASSED
+tests/test_excel_handler.py::test_normalize_cell[value3-2026/1/5-datetime \u5355\u4f4d\u6708\u65e5 \u2192 \u4e0d\u8865\u96f6] PASSED
+tests/test_excel_handler.py::test_normalize_cell[value4-2026/3/31-pd.Timestamp \u2192 YYYY/M/D] PASSED
+tests/test_excel_handler.py::test_normalize_cell[value5-2026/3/31-date \u2192 YYYY/M/D] PASSED
+tests/test_excel_handler.py::test_normalize_cell[123.0-123-\u6574\u6570\u6d6e\u70b9 123.0 \u2192 '123'] PASSED
+tests/test_excel_handler.py::test_normalize_cell[0.0-0-\u6574\u6570\u6d6e\u70b9 0.0   \u2192 '0'] PASSED
+tests/test_excel_handler.py::test_normalize_cell[3.14-3.14-\u771f\u6d6e\u70b9 3.14 \u4fdd\u7559\u539f\u6837] PASSED
+tests/test_excel_handler.py::test_normalize_cell[\u5f20\u4e09-\u5f20\u4e09-\u5b57\u7b26\u4e32\u539f\u6837\u8fd4\u56de] PASSED
+tests/test_excel_handler.py::test_normalize_cell[42-42-\u6574\u6570 \u2192 str] PASSED
+tests/test_excel_handler.py::test_normalize_cell[--\u7a7a\u5b57\u7b26\u4e32\u539f\u6837\u8fd4\u56de] PASSED
+tests/test_excel_handler.py::test_normalize_cell_verbose 
+============================================================
+原始值 (repr)                           raw type              →  预处理结果
+============================================================
+  None                               NoneType              ->  ''               OK  (None → 空字符串)
+  nan                                float                 ->  ''               OK  (NaN  → 空字符串)
+  datetime.datetime(2026, 3, 31, 8, 0)  datetime              ->  '2026/3/31'      OK  (datetime with time → YYYY/M/D)
+  datetime.datetime(2026, 1, 5, 0, 0)  datetime              ->  '2026/1/5'       OK  (datetime 单位月日 → 不补零)
+  Timestamp('2026-03-31 00:00:00')   Timestamp             ->  '2026/3/31'      OK  (pd.Timestamp → YYYY/M/D)
+  datetime.date(2026, 3, 31)         date                  ->  '2026/3/31'      OK  (date → YYYY/M/D)
+  123.0                              float                 ->  '123'            OK  (整数浮点 123.0 → '123')
+  0.0                                float                 ->  '0'              OK  (整数浮点 0.0   → '0')
+  3.14                               float                 ->  '3.14'           OK  (真浮点 3.14 保留原样)
+  '张三'                               str                   ->  '张三'             OK  (字符串原样返回)
+  42                                 int                   ->  '42'             OK  (整数 → str)
+  ''                                 str                   ->  ''               OK  (空字符串原样返回)
+============================================================
+PASSED
+tests/test_excel_handler.py::test_row_to_str PASSED
+tests/test_excel_handler.py::test_scan_excel_and_mode PASSED
+tests/test_excel_handler.py::test_scan_excel_or_mode PASSED
+tests/test_excel_handler.py::test_scan_excel_regex_mode PASSED
+2026-03-31 16:10:15.915 | WARNING  | engine.excel_handler:scan_excel:116 -   跳过空 Sheet: empty.xlsx / Empty
+tests/test_excel_handler.py::test_scan_excel_empty_sheet PASSED
+
+============================= 26 passed in 0.50s ==============================

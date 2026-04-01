@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unidata-sieve"
+version = "0.1.0"
+description = "A utility to extract and merge matched data from multiple Excel files."
+authors = [{ name = "Claude Code" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas~=2.2",
+    "openpyxl~=3.1",
+    "xlrd~=2.0",
+    "chardet~=5.2",
+    "pydantic~=2.7",
+    "loguru~=0.7",
+    "streamlit~=1.35"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest~=8.2",
+    "pytest-cov~=5.0"
+]
