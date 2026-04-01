@@ -236,47 +236,6 @@ run_app.bat
 
 ---
 
-### 3. 命令行（CLI）模式
-
-仓库包含 `cli.py`，用于在没有 GUI 的环境（服务器/定时任务）下直接调用 pipeline。  
-使用方式视你在 `cli.py` 中实现的参数解析而定，一般类似：
-
-```bash
-python cli.py --help
-
-# 伪例：按学号列表筛选
-python cli.py ^
-  --source "D:\data\原始数据.zip" ^
-  --mode or ^
-  --keywords 24405101001 24405101002 24405101003 ^
-  --out result.xlsx
-```
-
-请根据 `cli.py` 实际实现补充/调整参数说明。
-
----
-
-### 4. 打包为 exe（维护者参考）
-
-项目中已包含 `build.bat`，通常里面会调用 PyInstaller 等工具。例如：
-
-```bash
-pip install pyinstaller
-
-pyinstaller ^
-  --noconfirm ^
-  --onefile ^
-  --name UniData-Sieve ^
-  launcher.py
-```
-
-打包完成后：
-
-- exe 一般出现在 `dist/` 目录；
-- 将 exe 与其依赖（如 `_internal` 等）打包成一个发布文件夹；
-- 上传到 GitHub 的 **Releases**，供普通用户下载。
-
----
 
 
 
