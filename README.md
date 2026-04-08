@@ -19,7 +19,7 @@ UniData-Sieve 是一个**从海量、格式杂乱的 Excel / ZIP 中精确筛选
 2. 点击右侧或上方的 **Releases**（版本发布）入口。
 3. 在最新的 Release 中下载 `UniData-Sieve.exe`（文件名以实际为准），**以及它所在的整个文件夹**。
 
-> 如果暂时没有 Release，请联系项目维护者获取打包好的完整文件夹。
+
 
 ---
 
